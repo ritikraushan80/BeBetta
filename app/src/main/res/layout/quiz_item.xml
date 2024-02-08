@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:paddingHorizontal="12dp"
+        android:paddingVertical="20dp"
+        android:background="@drawable/question_gradient"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Will Leeds lead at half-time?"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/rajdhani_medium"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/coins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="50 Coins"
+            android:textSize="16sp"
+            android:textColor="#FFDD80"
+            android:fontFamily="@font/inter_reg"
+            android:layout_marginTop="25dp"
+            android:drawableStart="@drawable/coin_icon"
+            android:drawablePadding="4dp"
+            app:layout_constraintTop_toBottomOf="@+id/question"
+            app:layout_constraintStart_toStartOf="@+id/question"/>
+
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/radio_group_background"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/coins"
+            app:layout_constraintEnd_toEndOf="@+id/question"
+            app:layout_constraintStart_toEndOf="@+id/coins"
+            app:layout_constraintTop_toTopOf="@+id/coins">
+
+
+            <RadioButton
+                android:id="@+id/btn_1x"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_selector"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:fontFamily="@font/inter_medium"
+                android:paddingHorizontal="15dp"
+                android:text="1X"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/btn_2x"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/inter_medium"
+                android:paddingHorizontal="15dp"
+                android:text="2X"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/btn_5x"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/inter_medium"
+                android:paddingHorizontal="15dp"
+                android:text="5X"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/btn_10x"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/radio_btn_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/inter_medium"
+                android:paddingHorizontal="15dp"
+                android:text="10X"
+                android:textAlignment="center"
+                android:textColor="#FFCD6D"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/fire_watermark"
+            android:layout_marginEnd="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/radio_group"
+            app:layout_constraintEnd_toEndOf="@+id/radio_group"
+            app:layout_constraintTop_toTopOf="@+id/radio_group" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/radio_group"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/yes_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/rajdhani_medium"
+                android:text="Yes"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:backgroundTint="#175C12"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"/>
+
+
+            <Button
+                android:id="@+id/no_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:fontFamily="@font/rajdhani_medium"
+                android:text="No"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:backgroundTint="#175C12"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"/>
+
+            <Button
+                android:id="@+id/skip_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_reg"
+                android:text="Skip"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:backgroundTint="#00175C12"
+                android:gravity="center"  />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

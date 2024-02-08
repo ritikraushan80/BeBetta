@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BeBetta  App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="live">Live</string>
+    <string name="live_matches">Live matches</string>
+</resources>
